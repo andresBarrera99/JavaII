@@ -73,7 +73,7 @@ public class Main {
                 response = "Canceló la compra";
             else
                 System.out.println("Ingrese una opcion válida");
-        }while (!"S".equalsIgnoreCase(continuar) || "N".equalsIgnoreCase(continuar));
+        }while (!"S".equalsIgnoreCase(continuar) && !"N".equalsIgnoreCase(continuar));
         return response;
     }
 

@@ -105,7 +105,8 @@ public class Pizza {
         for(Vegetal vegetal: vegetales){
             if (!isFirst)
                 sb.append(",");
-            sb.append(vegetal.getNombre()).append(",");
+            sb.append(vegetal.getNombre());
+            isFirst = false;
         }
         return sb.toString();
     }
@@ -115,7 +116,8 @@ public class Pizza {
         for (Salsa salsa: salsas){
             if (!isFirst)
                 sb.append(",");
-            sb.append(salsa.getNombre()).append(",");
+            sb.append(salsa.getNombre());
+            isFirst = false;
         }
         return sb.toString();
     }
@@ -126,6 +128,7 @@ public class Pizza {
             if (!isFirst)
                 sb.append(",");
             sb.append(carne.getNombre());
+            isFirst = false;
         }
         return sb.toString();
     }
