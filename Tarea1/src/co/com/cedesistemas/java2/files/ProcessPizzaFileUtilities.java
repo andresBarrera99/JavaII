@@ -29,7 +29,8 @@ public class ProcessPizzaFileUtilities {
         List<Pizza> pizzas = new ArrayList<>();
         try {
             System.out.println("*********************************************************");
-            System.out.println("**********LECTURA DE DATOS DESDE ARCHIVO PLANO**********");
+            System.out.println("**********LECTURA DE DATOS DESDE ARCHIVO PLANO***********");
+            System.out.println("archivo: "+filePath);
             File file = new File(filePath);
             Scanner scanner = new Scanner(file);
             while (scanner.hasNextLine()) {
@@ -44,6 +45,8 @@ public class ProcessPizzaFileUtilities {
                 pizza.calcularPrecio();
                 pizzas.add(pizza);
             }
+            System.out.println("********************LECTURA FINALIZADA********************");
+            System.out.println("**********************************************************");
 
         } catch (Exception ex) {
             System.err.println("Error desconocido " + ex.getMessage());
